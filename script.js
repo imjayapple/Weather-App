@@ -13,7 +13,6 @@ const weatherIcon = document.querySelector(".weather-icon");
 async function checkWeather(city){
     const response = await fetch(apiUrl + city + `&appid=${myApiKey}`);
     var data = await response.json();
-    console.log(data);
 
     // Obtain and display all of the necessary weather details
 
@@ -42,6 +41,8 @@ async function checkWeather(city){
     else if(data.weather[0].main == 'Snow') {
         weatherIcon.src = "assets/images/snow.png";
     }
+
+    document.querySelector(".weather").style.display = "block";
 }
 
 searchBtn.addEventListener("click", ()=>{
