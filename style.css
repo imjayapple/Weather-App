@@ -80,6 +80,7 @@ body {
 .col img {
     width: 40px;
     margin-right: 10px;
+    margin-bottom: 15px;
 }
 .humidity, .wind {
     font-size: 28px;
